@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title>WPrivacy Policy</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ 
+   <p [innerHtml]="policy"></p>
+   <br/>
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar  class="text-center">
+    
+    <span (click)="closeModal()">Close</span>
+
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,27 @@
+<ion-header mode="md">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>News</ion-title>
+      <ion-button class="search_btn" slot="end" fill="clear" size="small">
+          <ion-icon name="search" color="light"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-label class="head_lbl mt-3 mb-3 text-bold">Latest in Health</ion-label>
+
+    <div *ngIf="loaded">
+    <app-news-item  *ngFor="let item of news" [item]="item"></app-news-item>
+    </div>
+
+    <div *ngIf="!loaded">
+      <app-list-item-skeleton *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]"></app-list-item-skeleton>
+    </div>
+    
+  </div>
+</ion-content>

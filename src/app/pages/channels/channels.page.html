@@ -1,0 +1,21 @@
+<ion-header mode="md">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Categories</ion-title>
+        <ion-button class="search_btn" slot="end" fill="clear" size="small">
+            <ion-icon name="search" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+      
+        <ion-card *ngFor="let item of categories" class="back_image bg_image" [style.backgroundImage]="'url('+ item +')'" (click)="goToCategoryResources(item)">
+            <fa-icon [icon]="(item.icon.replace('fa fa-',''))"></fa-icon>
+            <div class="desc">{{item?.class}}</div>
+        </ion-card> 
+    </div>
+</ion-content>

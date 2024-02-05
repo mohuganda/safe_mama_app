@@ -1,0 +1,41 @@
+<ion-header mode="md">
+  <ion-toolbar>
+      <ion-buttons slot="start" (click)="closeModal()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title>{{data?.title || 'Content Details'}}</ion-title>
+      <ion-buttons slot="end">
+      <ion-button   (click)="readContent(data?.content)" class="search_btn"  fill="clear" size="small">
+          <ion-icon  *ngIf="!readEnabled" name="mic-outline"></ion-icon>
+          <ion-icon  *ngIf="readEnabled" name="mic-off-outline"></ion-icon>
+      </ion-button>
+      <ion-button  (click)="shareResource(data?.content)"  class="search_btn" fill="clear" size="small">
+        <ion-icon name="share-social-outline"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+      <div class="content_div">
+
+        <div   #resourceBody [innerHTML]="data.content" style="display: none;"></div>
+          
+          <div class="flex_div">
+            <div *ngIf="isNetworkConnected"  class="back_image bg_image" [style.backgroundImage]="'url('+item?.image_prefix + item?.cover_image+')'"></div>
+            <div class="content_div">
+              <ion-label class="title_lbl link">{{item?.title}} - {{ data?.title  }}</ion-label>
+              <ion-label class="light_lbl"><ion-badge>{{item?.category}}</ion-badge></ion-label>
+            </div>
+          </div>
+         
+    
+          <ion-label class="detail_lbl">
+            <p class="resourceBody" [innerHTML]="data?.content"></p>
+          </ion-label> 
+
+    
+        </div>
+    </div>
+</ion-content>

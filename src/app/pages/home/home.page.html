@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header_div">
+        <ion-buttons slot="start">
+            <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <img src="assets/imgs/logo.png" width="30px">
+        <ion-button class="search_btn" slot="end" fill="clear" size="small"  (click)="goToResourceList()">
+            <ion-icon slot="icon-only" name="search-outline" color="light"></ion-icon>
+        </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" [pullFactor]="0.5" [pullMin]="100" [pullMax]="200" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+    >
+    </ion-refresher-content>
+    </ion-refresher>
+
+  <div class="main_content_div">
+    <ion-label class="head_lbl">Recommendations</ion-label>
+    <!-- home.page.html -->
+    <app-slides [items]="featured"></app-slides>
+    
+  
+    <ion-label class="head_lbl mt-3">Latest Resources <ion-icon name="chevron-forward-outline"  (click)="goToResourceList()"></ion-icon></ion-label>
+    <div class="bg_blue"  *ngFor="let item of resources">
+      <app-list-item   [item]="item" cssClass="custom-item"></app-list-item>
+    </div>
+    <div *ngIf="resources?.length<1">
+      <app-list-item-skeleton *ngFor="let item of [1,2,3,4,5]"></app-list-item-skeleton>
+    </div>
+
+    <div *ngIf="quickaccess?.length>0">
+      <ion-label class="head_lbl mt-3"><br>Quick Access<ion-icon name="chevron-forward-outline"  (click)="goToResourceList()"></ion-icon><br></ion-label>
+      <app-video-player *ngFor="let item of quickaccess" [item]="item"></app-video-player>
+    </div>
+
+    <ion-button (click)="goToResourceList()" expand="block" fill="clear">
+      See More...
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-button>
+
+
+  </div>
+</ion-content>

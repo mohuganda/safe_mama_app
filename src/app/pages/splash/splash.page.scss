@@ -1,0 +1,111 @@
+ion-content{
+    --background: #fff;
+    align-items: center;
+   
+    ion-card{
+      margin-top: -50px;
+      padding-bottom: 30px;
+      .heading{
+        min-width: 100%;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 30px;
+        color: var(--ion-color-primary);
+        font-weight: bold;
+      }
+
+      ion-button{
+        margin-top: 15px;
+      }
+    }
+
+
+    .design{
+
+      .circle{
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(14,28,56,1) 0%, rgb(237, 176, 21) 48%, rgb(237, 176, 21) 100%);
+        
+      }
+      
+      .circle1{
+        height:400px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -30%;
+        margin-left: -60px;
+        border-radius: 50%;
+        //background-color:#0E1C38;
+      
+        .img-circle{
+          // border-radius: 50%!important;
+          width: 30%;
+        }
+      }
+
+      .circle2{
+        height:200px;
+        width:200px;
+        margin-bottom: 0;
+        position: absolute;
+        border-radius: 50%;
+      }
+      .circle3{
+        height:100px;
+        width:100px;
+        margin-bottom: 0;
+        position: absolute;
+        border-radius: 50%;
+        margin-top: 55%;
+      }
+
+      .circle4{
+        height:50px;
+        width:50px;
+        margin-bottom: 0;
+        position: absolute;
+        border-radius: 50%;
+        margin-top: 88%;
+        margin-left: -15px;
+      }
+    }
+
+    .footer-note{
+      // display: flex;
+       position:absolute;
+      // justify-content: center;
+      // align-items: center;
+      bottom: 5px;
+      width: 100%;
+      color: #031f42;
+      padding: 10px;
+      p{
+        font-size: 11pt;
+        text-align: justify;
+        padding-bottom: 100px;
+      }
+    }
+
+   .footer-row{
+    position:absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: baseline;
+    padding-top: 50px;
+    }
+
+
+    .login{
+      display: none;
+      position:absolute;
+      justify-content: center;
+      align-items: center;
+      bottom: 30%;
+      min-width: 100%;
+      ion-button{
+        min-width: 80%;
+      }
+    }
+}

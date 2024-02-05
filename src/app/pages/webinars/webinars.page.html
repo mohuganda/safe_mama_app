@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode='ios'></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Webinars
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+<div class="loading" *ngIf="webinars?.length<1 && !loaded">
+  <p>Loading...</p>
+  <ion-spinner name="dots"></ion-spinner>
+</div>
+
+<p class="no-data" *ngIf="webinars?.length<1 && loaded">
+  No  data available
+</p>
+
+<ion-list *ngIf="webinars?.length>0">
+  <ion-list-header>
+    <h4>Listed Webinars</h4>
+  </ion-list-header>
+  <ion-row (click)="showLog(log)" *ngFor="let log of webinars">
+    <ion-card>
+      <ion-card-content>
+        <h3 class="text-bold" [innerHtml]="log?.title"></h3>
+        <hr/>
+        <p [innerHtml]="log?.description" class="description"></p>
+        <br>
+        <a class="btn-outline link" (click)="showLog(log)">View Details</a>
+        <hr>
+        <p><ion-icon name="calendar-clear-outline" class="success"></ion-icon> {{ log?.webinar_date }}</p>
+
+     </ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-list>
+
+
+
+</ion-content>

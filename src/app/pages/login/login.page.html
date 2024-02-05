@@ -1,0 +1,23 @@
+<ion-header mode="md">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-label class="simp_lbl">Login to continue</ion-label>
+
+        <ion-button expand="block" (click)="goToEmailLogin()">
+            Login with Email account ?
+        </ion-button>
+
+        <ion-label class="or_lbl">or</ion-label>
+
+        <div class="mobile_btn" (click)="goToMobileLogin()">
+            <ion-label><span>+256 </span>Login with mobile number</ion-label>
+        </div>
+    </div>
+</ion-content>

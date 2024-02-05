@@ -1,0 +1,34 @@
+.main_content_div {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed for your layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+    padding: 10px;
+  
+    .back_image {
+        flex-basis: 44.2%; /* Adjust as needed for your layout */
+        /* width: 48%; */ /* Alternatively, you can use width */
+        box-sizing: border-box; /* Include padding and border in the width */
+        margin: 10px!important;
+        margin-bottom: 10px; /* Add some margin between items */
+        height: 110px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: #1a95db;
+        align-items: center;
+        font-size: 14pt!important;
+        flex-direction: column;
+        padding-bottom: 20px;
+
+        fa-icon{
+            margin-top: 10px;
+            color: azure;
+            font-size: 16pt;
+        }
+        .desc{
+            font-size: 13pt;
+            color: white;
+        }
+    }
+}

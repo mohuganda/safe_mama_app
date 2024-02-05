@@ -1,0 +1,25 @@
+<ion-header mode="md">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+      <ion-label class="simp_lbl">Join with your Email Account</ion-label>
+
+      <ion-input placeholder="Email Address"></ion-input>
+      <ion-button expand="block" (click)="goToHome()">
+          CONTINUE
+          <ion-icon name="chevron-forward"></ion-icon>
+      </ion-button>
+
+      <ion-label class="or_lbl">or</ion-label>
+
+      <ion-button expand="block" (click)="goToHome()">
+          Logged in earlier ?
+      </ion-button>
+  </div>
+</ion-content>

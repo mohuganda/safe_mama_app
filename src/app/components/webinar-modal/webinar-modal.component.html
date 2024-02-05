@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title>Webinar Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h3 [innerHtml]="data?.title"></h3>
+  <hr/>
+  <p class="summary">
+    Date: {{data?.webinar_date || ''}}
+  </p>
+  <hr/>
+  <h6><small>About Webinar</small></h6>
+   <p [innerHtml]="data?.description"></p>
+   <br/>
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar [color]="(data?.ended)?'tertiary':'success'" class="text-center">
+
+    <a *ngIf="!data?.ended" href="{{data?.link}}" class="link text-white text-center">
+      Go to Webinar
+    </a>
+    <span *ngIf="data?.ended"> Webinar Ended</span>
+
+  </ion-toolbar>
+</ion-footer>

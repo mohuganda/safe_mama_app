@@ -1,0 +1,66 @@
+
+ion-item{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.flex_div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+
+    .back_image {
+        width: 120px;
+        height: 80px;
+        position: relative;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+
+        .live2{
+            font-size: 12px;
+            font-family: 'medium';
+            text-align: right;
+        }
+        .play_div{
+            display: flex;
+            align-items: center;
+            margin-left: -5px;
+            .play{
+                font-size: 20px;
+                margin-right: 1px;
+                color: white;
+            }
+            .name{
+                font-size: 14px;
+                margin-top: 0px;
+                line-height: 15px;
+                color: white;
+            }
+        }
+    }
+    .name_lbl {
+        margin-left: 16px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .desc {
+        margin-left: 16px;
+        font-size: 12px;
+    }
+    .menu {
+        color: grey;
+        position: absolute;
+        right: 0;
+    }
+
+    .text_desc{
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}

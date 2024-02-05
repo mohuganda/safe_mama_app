@@ -1,0 +1,42 @@
+.menu_flex_div{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    ion-label {
+        display: block;
+        color: #333333;
+    }
+    ion-icon{
+        color: #333232;
+        font-size: 45px;
+    }
+    .bold_lbl{
+        font-family: 'medium';
+    }
+    .light_lbl{
+        color: #313030;
+        font-size: 13px;
+    }
+}
+.menu_flex{
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    .menu_icn{
+        width: 16px;
+        min-width: 16px;
+    }
+    div {
+        margin-left: 16px;
+        .bold_lbl {
+            font-size: 16px;
+            display: block;
+        }
+        .small_lbl {
+            font-size: 14px;
+            color: #4b4a4a;
+            display: block;
+            // margin-top: 5px;
+        }
+    }
+}

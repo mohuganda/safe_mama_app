@@ -1,0 +1,119 @@
+<ion-app>
+    <ion-menu type="push" contentId="main" >
+        <ion-header>
+            
+        </ion-header>
+
+        <ion-content>
+            <ion-menu-toggle auto-hide="false">
+                <div class="menu_flex_div" (click)="goToLogin()">
+                    <div>
+                        <ion-icon name="person-circle-sharp"></ion-icon>
+                    </div>
+                    <div style="padding-left: 10px;">
+                        <ion-label class="bold_lbl">Safe Mama</ion-label>
+                        <ion-label class="light_lbl">For better maternal & child health</ion-label>
+                    </div>
+                </div>
+            </ion-menu-toggle>
+        
+            <ion-list style="background: transparent;">
+
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Home</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="goToResources()">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Resources</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="goToChannels()">
+                        <ion-icon name="apps-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Categories</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex"  (click)="goToNews()">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">News</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="goToFeatured()">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Featured</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="goToWebinars()">
+                        <ion-icon name="easel-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Webinars</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="goToTrainings()">
+                        <ion-icon name="reader-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Trainings</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="goToIncidentReport()">
+                        <ion-icon name="megaphone-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Report an Incident</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="goToContact()">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Talk to Us</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <div class="menu_flex" (click)="privacyPolicy()">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        <div>
+                            <ion-label class="bold_lbl">Privacy Policy</ion-label>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+
+            </ion-list>
+
+        </ion-content>
+
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

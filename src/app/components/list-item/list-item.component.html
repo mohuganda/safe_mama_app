@@ -1,0 +1,26 @@
+<ion-item [class]="cssClass">
+<div class="flex_div">
+  <div *ngIf="isNetworkConnected" class="back_image bg_image" [style.backgroundImage]="'url('+item.image_prefix + item.cover_image+')'">
+      <!-- <ion-label class="live2">9 min</ion-label> -->
+      <div class="play_div" (click)="goToResource(item)" *ngIf="item.video_url">
+        <ion-icon name="caret-forward-outline" class="play"></ion-icon>
+        <!-- <ion-label class="name">{{item.title | slice:0:20}}{{(item.title.length>5)?'...':''}}</ion-label> -->
+      </div>
+  </div>
+
+  <div *ngIf="!isNetworkConnected" class="back_image default_back_image" >
+    <!-- <ion-label class="live2">9 min</ion-label> -->
+    <div class="play_div" (click)="goToResource(item)" *ngIf="item.video_url">
+      <ion-icon name="caret-forward-outline" class="play"></ion-icon>
+    </div>
+   </div>
+
+  <div class="flex_div">
+    <div class="text_desc" (click)="goToResource(item)">
+      <ion-label class="name_lbl">{{item.title | slice:0:38}}{{(item.title.length>38)?'...':''}}</ion-label>
+      <ion-label class="desc" [innerHTML]="(item.description | slice:0:120)"></ion-label>
+      <ion-badge class="app-badge" color="success">{{item.category}}</ion-badge>
+    </div>
+  </div>
+</div>
+</ion-item>

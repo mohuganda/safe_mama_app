@@ -1,0 +1,28 @@
+ion-content{
+   /* --background: var(--ion-color-light);*/
+
+    ion-list-header{
+      h2{
+        padding-left: 20px;
+      }
+    }
+    .hubs{
+        margin-bottom: 20px!important;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-left: 20px;
+        padding-right: 30px;
+        padding-bottom: 10px;
+        scroll-behavior: smooth;
+        
+      &::-webkit-scrollbar {
+        display: none;
+      }
+        ion-card{
+            min-width: 67%;
+            max-width: 67%;
+            margin:5px;
+        }
+    }
+}

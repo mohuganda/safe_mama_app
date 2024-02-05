@@ -1,0 +1,51 @@
+.main_content_div {
+    padding: 16px;
+    .flex_div{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 16px;
+        position: relative;
+
+        .back_image {
+            width: 120px;
+            height: 80px;
+            position: relative;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px;
+
+            .live2{
+                font-size: 12px;
+                font-family: 'medium';
+                text-align: right;
+            }
+            .play_div{
+                display: flex;
+                align-items: center;
+                margin-left: -5px;
+                .play{
+                    font-size: 20px;
+                    margin-right: 1px;
+                }
+                .name{
+                    font-size: 14px;
+                    margin-top: 0px;
+                    line-height: 15px;
+                }
+            }
+        }
+        .name_lbl {
+            margin-left: 16px;
+            font-size: 15px;
+        }
+
+        .menu {
+            color: white;
+            position: absolute;
+            right: 0;
+        }
+    }
+}

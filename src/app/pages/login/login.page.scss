@@ -1,0 +1,30 @@
+.main_content_div {
+    padding: 20px;
+
+    ion-label {
+        display: block;
+    }
+
+    ion-button {
+        --border-radius: 3px !important;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        --background: #1f80e0;
+    }
+
+    .or_lbl {
+        text-align: center;
+        font-family: 'medium';
+        margin-bottom: 20px;
+    }
+
+    .mobile_btn {
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+        color: white;
+
+        span {
+            color: #707070;
+        }
+    }
+}

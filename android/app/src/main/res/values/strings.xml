@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Safe Mama</string>
+    <string name="title_activity_main">Safe Mama</string>
+    <string name="package_name">safemama.app</string>
+    <string name="custom_url_scheme">safemama.app</string>
+    <string name="activity_name">safemama</string>
+
+</resources>

@@ -1,0 +1,224 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: "regular";
+    src: url(assets/fonts/Poppins-Regular.ttf);
+} 
+@font-face {
+    font-family: "medium";
+    src: url(assets/fonts/Poppins-Medium.ttf);
+}
+  
+@font-face {
+    font-family: "semi-bold";
+    src: url(assets/fonts/Poppins-SemiBold.ttf);
+}
+  
+@font-face {
+    font-family: "bold";
+    src: url(assets/fonts//Poppins-Bold.ttf);
+}
+  
+* {
+    font-family: "regular";
+}
+
+ion-label {
+    color: #4b4a4a;
+}
+
+
+ion-content {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* For Firefox */
+  
+    &::-webkit-scrollbar {
+      width: 5px; /* Adjust the width as needed */
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+  }
+  
+
+.header_div{
+    display: flex !important;
+    align-items: center !important;
+    height: 60px;
+    color: #4b4a4a;
+
+    img {
+        width: 140px !important;
+    }
+    .search_btn{
+        position: absolute;
+        right: 0;
+    }
+}
+
+.bg_image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mt-3{
+   margin-top: 15px;
+}
+
+.mb-3{
+    margin-bottom: 15px;
+ }
+
+ .pt-3{
+    padding-top: 15px;
+ }
+ 
+ .pb-3{
+    padding-bottom: 15px;
+  }
+
+ .text-bold{
+    font-weight: bold;
+ }
+
+
+ swiper-container {
+    --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+    --swiper-pagination-color: var(--ion-color-primary, #3880ff);
+    --swiper-pagination-progressbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.25);
+    --swiper-scrollbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
+    --swiper-scrollbar-drag-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
+  }
+  
+  swiper-slide {
+    display: flex;
+    position: relative;
+  
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  
+    width:33.33%;
+    margin-right: 7px;
+    height: 100%;
+  
+    font-size: 18px;
+  
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  swiper-slide img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  
+.bordered-top{
+    border-top: 10px thin rgb(46, 45, 45)!important;
+}
+
+.bordered-bottom{
+    border-bottom: 1px thin rgb(102, 101, 101)!important;
+}
+
+.bordered-left{
+    border-left: 5px thin rgb(53, 38, 38)!important;
+}
+
+.app-badge{
+    max-width: fit-content!important;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin:4px 10px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    background-color: #50617c;
+}
+
+video {
+    object-fit: cover!important;
+}
+
+.text-yellow{
+    color: orange;
+}
+
+.text-success{
+    color: rgb(40, 111, 193);
+}
+
+ion-toolbar {
+    --background: transparent;
+    --border-color: transparent; /* Optional: Set border color to transparent */
+  }
+
+  .default_back_image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(assets/imgs/noimage.png);
+    background-position: center;
+  }
+
+  .text-bold{
+    font-weight: bold!important;
+  }
+
+
+
+.link{
+    color: #255fc2;
+    text-decoration: none;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-center{
+    text-align: center!important;
+    width: 100%!important;
+}
+
+  .loading{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .no-data{
+    text-align: center; 
+    color:grey;
+     width: 100%;
+     padding-top: 20%;
+  }

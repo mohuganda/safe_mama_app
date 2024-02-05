@@ -1,0 +1,7 @@
+{
+  "name": "safema",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

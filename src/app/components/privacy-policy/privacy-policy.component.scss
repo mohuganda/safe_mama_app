@@ -1,0 +1,33 @@
+ion-content{
+    --background:rgb(247, 247, 245);
+      padding: 20px;
+      hr{
+          max-width: 90%;
+          height: 1px;
+          background-color: grey;
+      }
+      h3{
+          text-transform:initial;
+          font-weight: bold;
+          padding: 13px;
+          text-align: justify;
+      }
+      small{
+          font-weight: bold;
+          font-size: 11pt;;
+      }
+
+      p{
+          padding-left: 20px;
+          padding-right: 15px;
+          font-size: 13pt;
+          text-align: justify;
+          font-style: oblique;
+      }
+      h6{
+        padding-left: 20px;
+        padding-right: 15px; 
+      }
+      .summary{
+      }
+}

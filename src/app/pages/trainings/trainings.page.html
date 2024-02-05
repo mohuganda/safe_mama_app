@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode='ios'></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Trainings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div *ngIf="entities.length>0">
+    <ion-list-header ><h2>Training Resources</h2></ion-list-header>
+
+    <ion-card *ngFor="let entity of entities" (click)="showEntity(entity)">
+      <ion-img src="../../../assets/imgs/knohub.png"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{ entity?.title}}</ion-card-title>
+        <ion-card-subtitle>{{ entity?.description | slice:0:60 }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{ entity?.description | slice:0:90 }}
+      </ion-card-content>
+    </ion-card>
+  
+</div>
+
+</ion-content>

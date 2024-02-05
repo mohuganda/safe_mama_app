@@ -1,0 +1,13 @@
+<ion-item>
+  <div class="flex_div">
+    <div  class="back_image bg_image" [style.backgroundImage]="'url('+item.image+')'" (click)="goToNews(item.link)" >
+    </div>
+    <div class="flex_div">
+      <div class="text_desc" (click)="goToNews(item.link)">
+        <ion-label class="name_lbl">{{item.title | slice:0:38}}{{(item.title.length>38)?'...':''}}</ion-label>
+        <ion-label class="desc">{{item.description | slice:0:50}}{{(item.title.description>50)?'...':''}}</ion-label>
+        <ion-chip>{{item.pubDate}}</ion-chip>
+      </div>
+    </div>
+  </div>
+  </ion-item>

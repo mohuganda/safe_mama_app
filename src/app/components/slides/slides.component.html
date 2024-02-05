@@ -1,0 +1,14 @@
+<swiper-container [modules]="swiperModules" [slidesPerView]="3" [loop]="false" [cssMode]="true" [spaceBetween]="10">
+  <swiper-slide  *ngFor="let item of items">
+    <div style="width: 100%;">
+      <div *ngIf="isNetworkConnected" class="back_image2 bg_image" [style.backgroundImage]="'url('+item.image_prefix + item.cover_image+')'" (click)="goToResource(item)"></div>
+      <div *ngIf="!isNetworkConnected" class="back_image2 bg_image default_back_image"  (click)="goToResource(item)"></div>
+        <div class="flex_div">
+          <div style="padding-left: 5px; display: flex; flex-direction: column;">
+            <ion-label class="top_lbl" (click)="goToResource(item)">{{item.title | slice:0:30}}{{(item.title.length>5)?'...':''}}</ion-label>
+            <ion-label class="light_lbl"><ion-badge>{{item.category}}</ion-badge></ion-label>
+          </div>
+        </div>
+      </div>
+  </swiper-slide>
+</swiper-container>

@@ -1,0 +1,49 @@
+<ion-header mode="md">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Resources</ion-title>
+      <ion-button  class="search_btn" slot="end" fill="clear" (click)="fetchResources(true)" size="small">
+        <ion-icon name="reload-circle-outline"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar
+      show-cancel-button="focus"
+      cancel-button-text="Cancel"
+      placeholder="What are you looking for?"
+      [debounce]="500" (ionInput)="handleSearch($event)"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-list *ngIf="loaded && (!filtering && filtered.length<1)" class="custom-list">
+      <ion-label *ngIf="category" class="head_lbl mt-3 mb-3 text-bold">Category: {{category?.class || 'All'}} <br></ion-label>
+      <ion-item *ngFor="let item of allresources; let index">
+      <app-list-item   [item]="item"></app-list-item>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="loaded &&  filtered.length>0" class="custom-list">
+      <ion-item *ngFor="let item of filtered; let index">
+      <app-list-item   [item]="item"></app-list-item>
+      </ion-item>
+    </ion-list>
+
+    <h3 *ngIf="filtering && filtered.length<1" class="text-center">No matching records</h3>
+
+    <div *ngIf="!loaded || filterLoading">
+      <app-list-item-skeleton *ngFor="let item of [1,2,3,4,5,6]"></app-list-item-skeleton>
+    </div>
+
+  </div>
+
+  <ion-infinite-scroll  (ionInfinite)="onIonInfinite($event)" threshold="7%">
+    <ion-infinite-scroll-content loadingText="Loading..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+ 
+</ion-content>

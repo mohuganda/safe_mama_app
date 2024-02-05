@@ -1,0 +1,25 @@
+.back_image2{
+    height: 140px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.flex_div{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    img{
+        width: 23px;
+    }
+    .top_lbl{
+        font-size: 12px;
+        text-align: left;
+        font-weight: bold;
+        color:#50617c;
+    }
+    .light_lbl{
+        color: rgb(36, 35, 35);
+        font-size: 10px;
+        text-align: left;
+    }
+}
