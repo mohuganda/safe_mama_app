@@ -4,7 +4,7 @@
         <ion-buttons slot="start">
             <ion-menu-button color="light"></ion-menu-button>
         </ion-buttons>
-        <img src="assets/imgs/logo.png" width="30px">
+        <img class="ion-padding" src="assets/imgs/logo.png" width="30px">
         <ion-button class="search_btn" slot="end" fill="clear" size="small"  (click)="goToResourceList()">
             <ion-icon slot="icon-only" name="search-outline" color="light"></ion-icon>
         </ion-button>
@@ -24,7 +24,7 @@
     </ion-refresher>
 
   <div class="main_content_div">
-    <ion-label class="head_lbl">Recommendations</ion-label>
+    <ion-label *ngIf="featured.length>0" class="head_lbl">Recommendations</ion-label>
     <!-- home.page.html -->
     <app-slides [items]="featured"></app-slides>
     
@@ -34,7 +34,7 @@
       <app-list-item   [item]="item" cssClass="custom-item"></app-list-item>
     </div>
     <div *ngIf="resources?.length<1">
-      <app-list-item-skeleton *ngFor="let item of [1,2,3,4,5]"></app-list-item-skeleton>
+      <app-list-item-skeleton *ngFor="let item of [1,2,3,4,5,6,7]"></app-list-item-skeleton>
     </div>
 
     <div *ngIf="quickaccess?.length>0">
@@ -42,7 +42,7 @@
       <app-video-player *ngFor="let item of quickaccess" [item]="item"></app-video-player>
     </div>
 
-    <ion-button (click)="goToResourceList()" expand="block" fill="clear">
+    <ion-button *ngIf="resources.length>0" (click)="goToResourceList()" expand="block" fill="clear">
       See More...
       <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
     </ion-button>

@@ -50,4 +50,8 @@ export class ListItemComponent  implements OnInit {
     this.router.navigate(['/video'],navData);
   }
 
+  getFormattedName(imageName:string){
+    return this.storage.urlEncode(imageName);
+  }
+
 }

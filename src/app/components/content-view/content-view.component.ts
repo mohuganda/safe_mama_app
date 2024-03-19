@@ -72,4 +72,9 @@ export class ContentViewComponent  implements OnInit {
   closeModal() {
     this.modalController.dismiss({ });
   }
+
+  getFormattedName(imageName:string){
+    return this.storage.urlEncode(imageName);
+  }
+
 }

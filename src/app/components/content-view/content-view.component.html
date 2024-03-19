@@ -23,7 +23,7 @@
         <div   #resourceBody [innerHTML]="data.content" style="display: none;"></div>
           
           <div class="flex_div">
-            <div *ngIf="isNetworkConnected"  class="back_image bg_image" [style.backgroundImage]="'url('+item?.image_prefix + item?.cover_image+')'"></div>
+            <div *ngIf="isNetworkConnected"  class="back_image bg_image" [style.backgroundImage]="'url('+item?.image_prefix + getFormattedName(item?.cover_image)+')'"></div>
             <div class="content_div">
               <ion-label class="title_lbl link">{{item?.title}} - {{ data?.title  }}</ion-label>
               <ion-label class="light_lbl"><ion-badge>{{item?.category}}</ion-badge></ion-label>

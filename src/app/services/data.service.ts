@@ -65,4 +65,8 @@ export class DataService {
     this.netWorkState.next(status.connected);
   }
 
+  urlEncode(imageName:string){
+    return encodeURIComponent(imageName);
+  }
+
 }

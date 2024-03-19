@@ -1,6 +1,6 @@
 <ion-item [class]="cssClass">
 <div class="flex_div">
-  <div *ngIf="isNetworkConnected" class="back_image bg_image" [style.backgroundImage]="'url('+item.image_prefix + item.cover_image+')'">
+  <div *ngIf="isNetworkConnected" class="back_image bg_image" [style.backgroundImage]="'url('+item.image_prefix + getFormattedName(item.cover_image)+')'">
       <!-- <ion-label class="live2">9 min</ion-label> -->
       <div class="play_div" (click)="goToResource(item)" *ngIf="item.video_url">
         <ion-icon name="caret-forward-outline" class="play"></ion-icon>

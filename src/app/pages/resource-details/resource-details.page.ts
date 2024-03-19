@@ -154,13 +154,24 @@ export class ResourceDetailsPage implements OnInit {
 
   formatDate(dateString: string): string {
 
-    const date = new Date(dateString);
-    // Use the DatePipe to format the date in words
-    return this.datePipe.transform(date, 'mediumDate', 'en-US') || '';
+    try{
+      const date = new Date(dateString);
+      // Use the DatePipe to format the date in words
+      return this.datePipe.transform(date, 'mediumDate', 'en-US') || '';
+    }
+    catch(error){
+      console.log(error)
+    }
+
+    return '';
   }
   
   ngOnDestroy() {
     this.selectedResourceSubscription.unsubscribe();
+  }
+
+  getFormattedName(imageName:string){
+    return this.storage.urlEncode(imageName);
   }
 
 

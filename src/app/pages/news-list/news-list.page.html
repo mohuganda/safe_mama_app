@@ -16,7 +16,9 @@
     <ion-label class="head_lbl mt-3 mb-3 text-bold">Latest in Health</ion-label>
 
     <div *ngIf="loaded">
-    <app-news-item  *ngFor="let item of news" [item]="item"></app-news-item>
+      <ion-label class="mt-3 link">Source: <a href="{{ (news[0]?.link).substr(0,21) }}">{{ (news[0]?.link).substr(0,21) }}</a> </ion-label>
+      <br>
+      <app-news-item  *ngFor="let item of news" [item]="item"></app-news-item>
     </div>
 
     <div *ngIf="!loaded">

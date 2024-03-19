@@ -12,7 +12,7 @@ import { Network } from '@capacitor/network';
 })
 export class NewsListPage implements OnInit {
 
-  news=[];
+  news:any[]= [];
   title:any;
   loaded=false;
   constructor(private ui: UiService, private api:ApiService, private route: ActivatedRoute) {
