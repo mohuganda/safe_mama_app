@@ -38,8 +38,8 @@
               <ion-label class="title_lbl">{{item?.title}}</ion-label>
               <ion-label class="title_lbl link">Last Updated: {{formatDate(item?.updated_at)}}</ion-label>
               <ion-label *ngIf="item?.resource" class="light_lbl"><b>Module</b></ion-label> 
-              <ion-label class="light_lbl"><ion-badge>{{item?.category}}</ion-badge></ion-label>
-              <ion-label class="title_lbl link">Source: {{formatDate(item?.source)}}</ion-label>
+              <ion-label class="light_lbl "><ion-badge class="text-yellow">{{item?.category}}</ion-badge></ion-label>
+              <ion-label class="title_lbl link">Source: {{item?.source}}</ion-label>
             </div>
           </div>
 
@@ -54,13 +54,13 @@
           <ion-grid fixed>
             <ion-row>
               <ion-col size="6">
-                <ion-button expand="block" size="small">
+                <ion-button expand="block" size="small" class="text-yellow">
                   <ion-icon slot="start" name="add-sharp"></ion-icon>
                   Add Favourite
                 </ion-button>
               </ion-col>
               <ion-col size="6">
-                <ion-button expand="block" size="small" (click)="shareResource(item)">
+                <ion-button expand="block" size="small" (click)="shareResource(item)" class="text-yellow">
                   <ion-icon slot="start" name="arrow-redo-sharp"></ion-icon>
                   Share
                 </ion-button>

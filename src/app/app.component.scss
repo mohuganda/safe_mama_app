@@ -7,7 +7,7 @@
         color: #333333;
     }
     ion-icon{
-        color: #333232;
+        color: rgb(151, 118, 10) ;
         font-size: 45px;
     }
     .bold_lbl{
@@ -19,9 +19,15 @@
     }
 }
 .menu_flex{
+    
     padding: 12px 20px;
     display: flex;
     align-items: center;
+
+    ion-icon{
+        color: rgb(151, 118, 10) ;
+    }
+
     .menu_icn{
         width: 16px;
         min-width: 16px;

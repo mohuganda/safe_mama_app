@@ -49,7 +49,7 @@
 }
 
 ion-label {
-    color: #4b4a4a;
+    color: #333333;
 }
 
 
@@ -160,10 +160,13 @@ ion-content {
     max-width: fit-content!important;
     padding-left: 20px;
     padding-right: 20px;
-    margin:4px 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin:7px 10px;
     letter-spacing: 1px;
     font-weight: lighter;
-    background-color: #50617c;
+    color: rgb(223, 173, 7)!important;
+    background-color: #0f0f0f;
 }
 
 video {
@@ -218,7 +221,7 @@ ion-toolbar {
 
   .no-data{
     text-align: center; 
-    color:grey;
+    color:rgb(72, 71, 71);
      width: 100%;
      padding-top: 20%;
   }

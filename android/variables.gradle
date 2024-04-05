@@ -13,6 +13,6 @@ ext {
     androidxJunitVersion = '1.1.5'
     androidxEspressoCoreVersion = '3.5.1'
     cordovaAndroidVersion = '10.1.1'
-    versionCode=7
-    versionName="7"
+    versionCode=8
+    versionName="8"
 }

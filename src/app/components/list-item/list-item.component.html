@@ -18,7 +18,7 @@
   <div class="flex_div">
     <div class="text_desc" (click)="goToResource(item)">
       <ion-label class="name_lbl">{{item.title | slice:0:38}}{{(item.title.length>38)?'...':''}}</ion-label>
-      <ion-label class="desc" [innerHTML]="(item.description | slice:0:120)"></ion-label>
+      <ion-label class="desc"  [innerHTML]="(item?.overview || item?.description |htmlToPlainText | slice:0:120)"></ion-label>
       <ion-badge class="app-badge" color="success">{{item.category}}</ion-badge>
     </div>
   </div>

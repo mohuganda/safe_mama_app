@@ -1,10 +1,16 @@
 img{
     width: 20px;
 }
-.lbl{
-    color: #707070;
-    font-size: 12px;
+.lbl,ion-icon{
+    color: rgb(151, 118, 10) ;
+    font-size: 13px;
 }
-.active{
-    color: #434343;
+
+
+.tab-selected{
+
+    ion-icon,.active{
+        color: #0e0e0e ;
+    }
+
 }

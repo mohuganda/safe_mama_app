@@ -15,7 +15,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        background-color: #1a95db;
+        background-color: #000000;
         align-items: center;
         font-size: 14pt!important;
         flex-direction: column;
@@ -23,12 +23,12 @@
 
         fa-icon{
             margin-top: 10px;
-            color: azure;
+            color: rgb(214, 168, 19);
             font-size: 16pt;
         }
         .desc{
             font-size: 13pt;
-            color: white;
+            color: rgb(214, 168, 19);
         }
     }
 }

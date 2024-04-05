@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { WebinarModalComponent } from '../components/webinar-modal/webinar-modal.component';
 import { PrivacyPolicyComponent } from '../components/privacy-policy/privacy-policy.component';
 import { ContentViewComponent } from '../components/content-view/content-view.component';
+import { HtmlToPlainTextPipe } from '../pipes/htmltoplaintext.pipe';
 
 
 
@@ -21,7 +22,8 @@ import { ContentViewComponent } from '../components/content-view/content-view.co
     NewsItemComponent,
     WebinarModalComponent,
     PrivacyPolicyComponent,
-    ContentViewComponent
+    ContentViewComponent,
+    HtmlToPlainTextPipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -37,7 +39,8 @@ import { ContentViewComponent } from '../components/content-view/content-view.co
     ContentViewComponent,
     SlidesComponent,
     NewsItemComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HtmlToPlainTextPipe
   ],
 })
 export class SharedModule { }

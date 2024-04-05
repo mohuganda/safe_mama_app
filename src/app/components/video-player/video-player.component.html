@@ -17,7 +17,7 @@
       <img [src]="item.image_prefix + item.cover_image" alt="">
     </div> -->
     <div style="padding-left: 8px; margin-bottom: 20px; margin-top: 10px!important;">
-      <ion-label class="top_lbl" (click)=" goToResource(item)">{{item.description | slice:0:100}}{{(item.description.length>5)?'...':''}}</ion-label>
+      <ion-label class="top_lbl" (click)=" goToResource(item)">{{item?.overview || item?.description | htmlToPlainText | slice:0:100}}{{(item.overview.length>5)?'...':''}}</ion-label>
       <ion-badge class="mt-3">{{item.category}}</ion-badge>
     </div>
   </div>
